@@ -6,7 +6,7 @@
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 20:31:54 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/15 19:51:48 by cbarbosa         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:36:45 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (s[i] != '\0')
 	{

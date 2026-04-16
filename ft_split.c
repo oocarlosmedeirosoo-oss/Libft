@@ -6,13 +6,13 @@
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 20:11:18 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/15 22:26:36 by cbarbosa         ###   ########.fr       */
+/*   Updated: 2026/04/16 20:20:08 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_count(const char  *str, char c)
+static int ft_count_words(const char  *str, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -33,7 +33,7 @@ static int ft_count(const char  *str, char c)
 	return (count);
 }
 
-static char *ft_word(const char *str, char c)
+static char *ft_get_word(const char *str, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -57,8 +57,11 @@ static char *ft_word(const char *str, char c)
 
 static void ft_free(char **new, int x)
 {
-	while (x--)
+	while (x >= 0)
+	{
 		free(new[x]);
+		x--;
+	}
 	free(new);
 }
 
@@ -66,28 +69,55 @@ char	**ft_split(char const *s, char c)
 {
 	char	**new;
 	size_t	i;
-	size_t	j;
+	size_t	words;
 
 	if (!s)
 		return (NULL);
-	new = malloc(sizeof(char*) * ft_count(s, c) + 1);
+	words = ft_count_words(s, c);
+	new = malloc(sizeof(char *) * (words + 1));
 	if (!new)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	while (i < words)
 	{
-		while (s[i]&& s[i] == c)
-			i++;
-		if (s[i])
-		{
-			if (!(new[j] = ft_word(s + i, c)))
-				return (ft_free(new, j), NULL);
-			j++;
-			while (s[i] && s[i] != c)
-				i++;
-		}
+		while (*s && *s == c)
+			s++;
+		new[i] = ft_get_word(s, c);
+		if (!new)
+			return (ft_free(new, i), NULL);
+		while (*s && *s != c)
+			s++;
+		i++;
 	}
-	new[j] = NULL;
+	new[i] = NULL;
 	return (new);
 }
+
+/*int main(void)
+{
+	const char *str = "Carlos Alberto Barbosa De Medeiros";
+	int x;
+	char c = ' ';
+	char *getWord;
+	char	**new;
+	int i;
+
+	printf ("%d\n", x = ft_count_words(str, c));
+	printf ("%s\n", getWord = ft_get_word(str, c));
+	printf ("%s\n", getWord = ft_get_word(str + 7, c));
+	
+	i = 0;
+	printf("\n--- Teste do ft_split ---\n");
+	new = ft_split(str, c);
+	if (new)
+	{
+		while (new[i] != NULL)
+		{
+			printf("Posicao [%d]: %s\n", i, new[i]);
+			free(new[i]);
+			i++;
+		}
+		free(new);
+	}	
+	return (0);
+}*/

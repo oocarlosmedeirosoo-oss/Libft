@@ -6,7 +6,7 @@
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 20:06:04 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/14 21:35:52 by cbarbosa         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:28:20 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	ptr1 = (unsigned char *)dest;
 	ptr2 = (unsigned char *)src;
-
 	i = 0;
 	while (i < n)
 	{

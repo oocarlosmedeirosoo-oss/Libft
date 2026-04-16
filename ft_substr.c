@@ -6,7 +6,7 @@
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:48:08 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/15 19:14:32 by cbarbosa         ###   ########.fr       */
+/*   Updated: 2026/04/16 20:11:15 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if(!s)
+	if (!s)
 		return (NULL);
 	j = ft_strlen(s);
 	if (start >= j)
@@ -29,7 +29,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!new)
 		return (NULL);
 	i = 0;
-	while (i < len &&s[start + i])
+	while (i < len && s[start + i])
 	{
 		new[i] = s[start + i];
 		i++;
@@ -37,3 +37,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new[i] = '\0';
 	return (new);
 }
+
+/*int main(void)
+{
+	char 		*new;
+	const char	*str = "Carlos Medeiros";
+
+	printf ("%s\n", new = ft_substr(str, 7, 9));
+	
+	free(new);
+	return (0); //simplesmente boa pratica;
+}*/

@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/15 17:43:23 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/16 17:31:19 by cbarbosa         ###   ########.fr       */
+/*   Created: 2026/04/16 17:59:58 by cbarbosa          #+#    #+#             */
+/*   Updated: 2026/04/16 18:08:31 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*strrchr(const char *s, int c)
 {
-	char	*dup;
 	size_t	i;
-	size_t	j;
 
-	i = ft_strlen(s);
-	dup = malloc (sizeof(char) * (i + 1));
-	if (!dup)
-		return (NULL);
-	j = 0;
-	while (j < i)
+	i =ft_strlen(s);
+	while (i >= 0)
 	{
-		dup[j] = s[j];
-		j++;
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i--;
 	}
-	dup[j] = '\0';
-	return (dup);
+	return (NULL);
 }
+

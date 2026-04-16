@@ -6,7 +6,7 @@
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 19:15:03 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/15 19:26:33 by cbarbosa         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:30:10 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
-	if(!s1 || !s2)
+	if (!s1 || !s2)
 		return (NULL);
 	i = ft_strlen(s1);
 	j = ft_strlen(s2);
@@ -28,5 +28,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(new, s1, i);
 	ft_memcpy(new + i, s2, j);
 	new[i + j] = '\0';
-	return(new);
+	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 20:23:49 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/14 21:17:39 by cbarbosa         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:37:07 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[j + i] = '\0';
 	return (j + i);
 }
-

@@ -6,7 +6,7 @@
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 22:29:43 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/15 22:35:20 by cbarbosa         ###   ########.fr       */
+/*   Updated: 2026/04/16 17:25:20 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
 	char	*new;
-	
+
 	if (!s || !f)
 		return (NULL);
 	new = malloc(sizeof(char) * (ft_strlen(s) + 1));
