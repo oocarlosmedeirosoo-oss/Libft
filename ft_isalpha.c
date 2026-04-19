@@ -6,7 +6,7 @@
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:33:34 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/14 17:44:21 by cbarbosa         ###   ########.fr       */
+/*   Updated: 2026/04/16 22:11:37 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-/*int main (void)
-{
-	int c = '7';
-	int x;
-
-	printf("%d\n", x = ft_isalpha(c));
-	
-	return (0);
-}*/

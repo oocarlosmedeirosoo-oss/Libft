@@ -6,17 +6,20 @@
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 22:27:07 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/16 19:20:56 by cbarbosa         ###   ########.fr       */
+/*   Updated: 2026/04/18 13:08:52 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_count_digits(int n)
+static int	ft_count_digits(int n)
 {
 	size_t	i;
 
-	i = (n <= 0) ? 1 : 0;
+	if (n <= 0)
+		i = 1;
+	else
+		i = 0;
 	while (n != 0)
 	{
 		n = n / 10;

@@ -6,7 +6,7 @@
 /*   By: cbarbosa <cbarbosa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 18:07:25 by cbarbosa          #+#    #+#             */
-/*   Updated: 2026/04/14 18:10:29 by cbarbosa         ###   ########.fr       */
+/*   Updated: 2026/04/16 22:11:45 by cbarbosa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-/*int main(void)
-{
-	int c = 125;
-	int x;
-
-	printf ("%d\n", x = ft_isprint(c));
-	return (0);
-}*/
