@@ -19,7 +19,7 @@ int	ft_atoi(const char *nptr)
 	int	k;
 
 	i = 0;
-	while ((nptr[i] == 32 && (nptr[i] >= 9) && (nptr[i] <= 13)))
+	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
 	j = 1;
 	if (nptr[i] == '+' || nptr[i] == '-')
